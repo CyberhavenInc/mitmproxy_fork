@@ -138,9 +138,9 @@ def run(
 
 
 def mitmproxy(args=None) -> int | None:  # pragma: no cover
-    from mitmproxy.tools import console
+    from mitmproxy.tools import background
 
-    run(console.master.ConsoleMaster, cmdline.mitmproxy, args)
+    run(background.BackgroundMaster, cmdline.mitmproxy, args)
     return None
 
 
